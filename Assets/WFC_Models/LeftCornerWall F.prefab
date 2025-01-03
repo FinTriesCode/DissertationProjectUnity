@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 1679223691026150100}
   - component: {fileID: 4401018926159135088}
   m_Layer: 0
-  m_Name: LeftCornerWall
+  m_Name: LeftCornerWall F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,14 +132,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8686629223922274692}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710653, z: -0, w: 0.70710707}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.39149, y: 1.8187817, z: 3.864104}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2934561023211767129}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &120976119187377315
 MeshFilter:
   m_ObjectHideFlags: 0

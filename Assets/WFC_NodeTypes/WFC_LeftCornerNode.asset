@@ -15,9 +15,13 @@ MonoBehaviour:
   _name: LeftCornerNodeType
   _prefab: {fileID: 8686629223922274692, guid: b1385cd182d19e5458860010b856d630, type: 3}
   _topConnection:
-    _compatibleNodes: []
+    _compatibleNodes:
+    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
   _bottomConnection:
-    _compatibleNodes: []
+    _compatibleNodes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   _leftConnection:
     _compatibleNodes: []
   _rightConnection:
