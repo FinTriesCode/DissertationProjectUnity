@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WFC_LeftCornerNode
   m_EditorClassIdentifier: 
   _name: LeftCornerNodeType
-  _prefab: {fileID: 8686629223922274692, guid: b1385cd182d19e5458860010b856d630, type: 3}
+  _prefab: {fileID: 662411729528302285, guid: b1385cd182d19e5458860010b856d630, type: 3}
   _topConnection:
     _compatibleNodes: []
   _bottomConnection:

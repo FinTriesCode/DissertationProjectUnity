@@ -32,7 +32,8 @@ public class WFC_Builder : MonoBehaviour
     {
         _toCollapse.Clear();
 
-        _toCollapse.Add(new Vector2Int(_width / 2, _height / 2));
+        //_toCollapse.Add(new Vector2Int(_width / 2, _height / 2));
+        _toCollapse.Add(new Vector2Int(0, 0));
 
         while (_toCollapse.Count > 0)
         {

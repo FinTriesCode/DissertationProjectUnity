@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WFC_ParallelNode
   m_EditorClassIdentifier: 
   _name: ParallelNodeType
-  _prefab: {fileID: 8611615878942864220, guid: a23003c522f6e2c49a358afac057bbbe, type: 3}
+  _prefab: {fileID: 7124956365814833945, guid: 4822deef496aa1f449c462ba3d3e520c, type: 3}
   _topConnection:
     _compatibleNodes: []
   _bottomConnection:
