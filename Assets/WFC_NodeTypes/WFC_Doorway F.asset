@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c424a130b66f26f4bad2e55fc17ee6c1, type: 3}
-  m_Name: WFC_StraightNodeTypeF
+  m_Name: WFC_Doorway F
   m_EditorClassIdentifier: 
-  _name: StraightWallNodeTypeF
-  _prefab: {fileID: 5118199266088894082, guid: aed62ddbae16d144582b82cf27753298, type: 3}
+  _name: DoorwayNode F
+  _prefab: {fileID: 2291699966800702954, guid: 369c436eb228334418beadccb5406d4a, type: 3}
   _topConnection:
     _compatibleNodes:
     - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
     - {fileID: 11400000}
-    - {fileID: 11400000, guid: ef6240d4434eaea4182c424ee1f80984, type: 2}
+    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
   _bottomConnection:
     _compatibleNodes:
     - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
     - {fileID: 11400000}
-    - {fileID: 11400000, guid: ef6240d4434eaea4182c424ee1f80984, type: 2}
+    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
   _leftConnection:
     _compatibleNodes:
     - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}

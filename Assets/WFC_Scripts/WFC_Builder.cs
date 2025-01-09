@@ -9,8 +9,8 @@ public class WFC_Builder : MonoBehaviour
 
     private WFC_Node[,] _grid;
 
-    public List<WFC_Node> _nodes = new();
-    private List<Vector2Int> _toCollapse = new();
+    public List<WFC_Node> _nodes = new List<WFC_Node>();
+    private List<Vector2Int> _toCollapse = new List<Vector2Int>();
 
     private Vector2Int[] _offsets = new Vector2Int[]
     {
@@ -19,6 +19,7 @@ public class WFC_Builder : MonoBehaviour
         new Vector2Int(1, 0),
         new Vector2Int(-1, 0)
     };
+
 
     private void Start()
     {
@@ -85,7 +86,7 @@ public class WFC_Builder : MonoBehaviour
                 _grid[x, y] = _potentialNodes[Random.Range(0, _potentialNodes.Count)];
             }
 
-            GameObject _newNode = Instantiate(_grid[x, y]._prefab, new Vector3(x, y, 0f), Quaternion.identity);
+            GameObject _newNode = Instantiate(_grid[x, y]._prefab, new Vector3(x, 0f, y) * 4, _grid[x, y]._prefab.transform.rotation);
 
             _toCollapse.RemoveAt(0);
 
@@ -104,4 +105,5 @@ public class WFC_Builder : MonoBehaviour
             if (!_validNodes.Contains(_pPotentialNodes[i])) _pPotentialNodes.RemoveAt(i);
         }
     }
+
 }

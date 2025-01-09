@@ -15,26 +15,10 @@ MonoBehaviour:
   _name: LeftCornerNodeTypeF
   _prefab: {fileID: 8686629223922274692, guid: 032ffd1721fae1c4fb939bfd141385f5, type: 3}
   _topConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
-    - {fileID: 11400000, guid: 83e1bbae8464a214e876512b9a7c4b32, type: 2}
-    - {fileID: 11400000, guid: cb32ef4297755f54da59cf9b79ef03bf, type: 2}
-    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
+    _compatibleNodes: []
   _bottomConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
-    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
-    - {fileID: 11400000, guid: cb32ef4297755f54da59cf9b79ef03bf, type: 2}
-    - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
+    _compatibleNodes: []
   _leftConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
-    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
-    - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
-    - {fileID: 11400000, guid: 415b31949d6e6954eb8283f7c2887478, type: 2}
+    _compatibleNodes: []
   _rightConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
-    - {fileID: 11400000, guid: 83e1bbae8464a214e876512b9a7c4b32, type: 2}
-    - {fileID: 11400000, guid: 415b31949d6e6954eb8283f7c2887478, type: 2}
-    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
+    _compatibleNodes: []
