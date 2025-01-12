@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6563621601162052305}
   - component: {fileID: 4806121171267685946}
   - component: {fileID: 2793746962519749324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744220869596448479}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 5592492283460282755}
   - component: {fileID: 450060401183404040}
   - component: {fileID: 5549647363371219341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doorway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,8 +167,8 @@ Transform:
   m_GameObject: {fileID: 2998077898313629729}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1.305}
-  m_LocalScale: {x: 0.39148998, y: 1.81878, z: 1.4153693}
+  m_LocalPosition: {x: -0, y: 1, z: -1.338}
+  m_LocalScale: {x: 0.39148998, y: 1.81878, z: 1.3432279}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 979007090549484562}
@@ -230,7 +230,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2998077898313629729}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3653555594626034041}
   - component: {fileID: 3727201675130135263}
   - component: {fileID: 2211889230543130503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doorway (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,8 +272,8 @@ Transform:
   m_GameObject: {fileID: 6620117470402779968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1, z: 1.32}
-  m_LocalScale: {x: 0.39148998, y: 1.81878, z: 1.3977293}
+  m_LocalPosition: {x: 0, y: 1, z: 1.34}
+  m_LocalScale: {x: 0.39148998, y: 1.81878, z: 1.327689}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 979007090549484562}
@@ -335,7 +335,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6620117470402779968}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

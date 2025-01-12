@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4197467547436560025}
   - component: {fileID: 5399634173170299605}
   - component: {fileID: 3542879494199442939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933337635005899628}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 890331102835129518}
   - component: {fileID: 6589319324692116525}
   - component: {fileID: 5717117922308456573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Birch 2_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 4310336216941744784}
   - component: {fileID: 1424628692535112566}
   - component: {fileID: 1818240263557725297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Birch_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 4145078208789707566}
   - component: {fileID: 8674624230887952294}
   - component: {fileID: 3002254233275657793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Birch 2_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 3375596966055037170}
   - component: {fileID: 4156666313245788261}
   - component: {fileID: 4636207635251368423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Birch 2_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1660995292737295391}
   - component: {fileID: 3073834180301616490}
   - component: {fileID: 5797800376021633412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Birch 2_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
