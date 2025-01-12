@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float _sens = 50f;
     private float _sensMultiplier = 1f;
 
-    public float _speedpeed = 4500;
+    public float _speed = 4500;
     public float _maxSpeed = 20;
     public bool _isGrounded;
     public LayerMask _isGroundLayer;
@@ -67,20 +67,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        MyInput();
+        GetInput();
         Look();
     }
 
     //user input
-    private void MyInput()
+    private void GetInput()
     {
+        //get axis
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
 
+        //set additional movement binds
         _jumping = Input.GetButton("Jump");
         _crouching = Input.GetKey(KeyCode.LeftControl);
 
-        //Crouching
+        //crouch state
         if (Input.GetKeyDown(KeyCode.LeftControl))
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -89,8 +91,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void StartCrouch()
     {
+        //scale player to that of the crouch scale
+        //update the player's position to fit above
         transform.localScale = _crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+
+        //adjust rigid body so that if above a certain velocity - apply a slide force
         if (_rb.velocity.magnitude > 0.5f)
         {
             if (_isGrounded)
@@ -102,75 +108,77 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopCrouch()
     {
+        //set scale and position to player-origin
         transform.localScale = _playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 
     private void Movement()
     {
-        //Extra gravity
+        //additional gravity to enhance movement "feeling"
         _rb.AddForce(Vector3.down * Time.deltaTime * 10);
 
-        //Find actual velocity relative to where player is looking
-        Vector2 mag = FindVelRelativeToLook();
-        float xMag = mag.x, yMag = mag.y;
+        //find player velocity reletive to player orientation
+        Vector2 _mag = FindVelRelativeToLook();
+        float _xMag = _mag.x, yMag = _mag.y; //get/set magnitudes
 
-        //Counteract sliding and sloppy movement
-        CounterMovement(x, y, mag);
+        //add friction to slide to enhace sldie feel
+        MovementFriction(x, y, _mag);
 
-        //If holding jump && ready to jump, then jump
+        //allows player to hold jump button for continuous jumping
         if (_canJump && _jumping) Jump();
 
         //Set max speed
         float maxSpeed = this._maxSpeed;
 
-        //If sliding down a ramp, add force down so player stays grounded and also builds speed
+        //sliding down ramps speeds up player by adding force
         if (_crouching && _isGrounded && _canJump)
         {
             _rb.AddForce(Vector3.down * Time.deltaTime * 3000);
             return;
         }
 
-        //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
-        if (x > 0 && xMag > maxSpeed) x = 0;
-        if (x < 0 && xMag < -maxSpeed) x = 0;
+        //clamp player velocity
+        if (x > 0 && _xMag > maxSpeed) x = 0;
+        if (x < 0 && _xMag < -maxSpeed) x = 0;
         if (y > 0 && yMag > maxSpeed) y = 0;
         if (y < 0 && yMag < -maxSpeed) y = 0;
 
         //Some multipliers
-        float multiplier = 1f, multiplierV = 1f;
+        float _mp = 1f, _mpV = 1f;
 
-        // Movement in air
+        //player aero-movement
         if (!_isGrounded)
         {
-            multiplier = 0.5f;
-            multiplierV = 0.5f;
+            _mp = 0.5f;
+            _mpV = 0.5f;
         }
 
-        // Movement while sliding
-        if (_isGrounded && _crouching) multiplierV = 0f;
+        //slide movement
+        if (_isGrounded && _crouching) _mpV = 0f;
 
-        //Apply forces to move player
-        _rb.AddForce(orientation.transform.forward * y * _speedpeed * Time.deltaTime * multiplier * multiplierV);
-        _rb.AddForce(orientation.transform.right * x * _speedpeed * Time.deltaTime * multiplier);
+        //apply force to make actual movements
+        _rb.AddForce(orientation.transform.forward * y * _speed * Time.deltaTime * _mp * _mpV);
+        _rb.AddForce(orientation.transform.right * x * _speed * Time.deltaTime * _mp);
     }
 
     private void Jump()
     {
-        if (_isGrounded && _canJump)
+        if (_isGrounded && _canJump) //if player can jump
         {
-            _canJump = false;
+            _canJump = false; //update state
 
-            //Add jump forces
+            //apply jump by adding forces
             _rb.AddForce(Vector2.up * _jumpForce * 1.5f);
             _rb.AddForce(_normalVector * _jumpForce * 0.5f);
 
-            //If jumping while falling, reset y velocity.
-            Vector3 vel = _rb.velocity;
+            //if jumping while falling, reset y velocity to make jumping responsive
+            Vector3 _vel = _rb.velocity;
+
             if (_rb.velocity.y < 0.5f)
-                _rb.velocity = new Vector3(vel.x, 0, vel.z);
+                _rb.velocity = new Vector3(_vel.x, 0, _vel.z);
             else if (_rb.velocity.y > 0)
-                _rb.velocity = new Vector3(vel.x, vel.y / 2, vel.z);
+                _rb.velocity = new Vector3(_vel.x, _vel.y / 2, _vel.z);
 
             Invoke(nameof(ResetJump), _jumpCooldown);
         }
@@ -178,47 +186,49 @@ public class PlayerMovement : MonoBehaviour
 
     private void ResetJump()
     {
-        _canJump = true;
+        _canJump = true; //update state
     }
 
-    private float desiredX;
+    private float _desX; //desired x
+
     private void Look()
     {
+        //read mouse imput and apply multipliers/settings
         float mouseX = Input.GetAxis("Mouse X") * _sens * Time.fixedDeltaTime * _sensMultiplier;
         float mouseY = Input.GetAxis("Mouse Y") * _sens * Time.fixedDeltaTime * _sensMultiplier;
 
-        //Find current look rotation
+        //find current look rot
         Vector3 rot = playerCam.transform.localRotation.eulerAngles;
-        desiredX = rot.y + mouseX;
+        _desX = rot.y + mouseX;
 
-        //Rotate, and also make sure we dont over- or under-rotate.
+        //apply and clamp rotation to enhance responsiveness
         _xRot -= mouseY;
         _xRot = Mathf.Clamp(_xRot, -90f, 90f);
 
-        //Perform the rotations
-        playerCam.transform.localRotation = Quaternion.Euler(_xRot, desiredX, 0);
-        orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
+        //preform the rots
+        playerCam.transform.localRotation = Quaternion.Euler(_xRot, _desX, 0);
+        orientation.transform.localRotation = Quaternion.Euler(0, _desX, 0);
     }
 
-    private void CounterMovement(float x, float y, Vector2 mag)
+    private void MovementFriction(float x, float y, Vector2 mag)
     {
         if (!_isGrounded || _jumping) return;
 
         //Slow down sliding
         if (_crouching)
         {
-            _rb.AddForce(_speedpeed * Time.deltaTime * -_rb.velocity.normalized * _slideFriction);
+            _rb.AddForce(_speed * Time.deltaTime * -_rb.velocity.normalized * _slideFriction);
             return;
         }
 
         //Counter movement
         if (Math.Abs(mag.x) > _Threshold && Math.Abs(x) < 0.05f || (mag.x < -_Threshold && x > 0) || (mag.x > _Threshold && x < 0))
         {
-            _rb.AddForce(_speedpeed * orientation.transform.right * Time.deltaTime * -mag.x * _friction);
+            _rb.AddForce(_speed * orientation.transform.right * Time.deltaTime * -mag.x * _friction);
         }
         if (Math.Abs(mag.y) > _Threshold && Math.Abs(y) < 0.05f || (mag.y < -_Threshold && y > 0) || (mag.y > _Threshold && y < 0))
         {
-            _rb.AddForce(_speedpeed * orientation.transform.forward * Time.deltaTime * -mag.y * _friction);
+            _rb.AddForce(_speed * orientation.transform.forward * Time.deltaTime * -mag.y * _friction);
         }
 
         //Limit diagonal running. This will also cause a full stop if sliding fast and un-crouching, so not optimal.
