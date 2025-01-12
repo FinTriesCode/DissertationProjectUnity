@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    WallRun _wallRun;
 
     //references
     public Transform playerCam;
@@ -57,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         //lock and show cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        _wallRun = GetComponent<WallRun>();
     }
 
 
@@ -182,6 +185,13 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), _jumpCooldown);
         }
+
+        if(_wallRun._isWallRunning)
+        {
+            //jump from wall
+        }
+
+
     }
 
     private void ResetJump()
