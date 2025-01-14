@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6380619820840216046}
   - component: {fileID: 9157566233582675900}
   - component: {fileID: 5431870520285015522}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ParallelWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603504257987560729}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 4682340232002074169}
   - component: {fileID: 6949865196037306971}
   - component: {fileID: 9104470020496884722}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ParallelWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7221404334305538132}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

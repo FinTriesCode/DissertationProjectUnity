@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7788883543363670850}
   - component: {fileID: 6575216091089418439}
   - component: {fileID: 8643944122876240158}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8096546124388244901}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8744725968463913020}
   - component: {fileID: 3769515665800254611}
   - component: {fileID: 2214344867027386375}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8297505916926734344}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

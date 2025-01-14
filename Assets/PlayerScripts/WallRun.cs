@@ -11,7 +11,7 @@ public class WallRun : MonoBehaviour
     public LayerMask _wallMask;
 
     public float _wallRunForce, _maxWallRunTime, _maxWallRunSpeed;
-    public float _maxCamTilt, _minCamTilt;
+    public float _maxCamTilt, _camTilt;
 
     public bool _isWallRight, _isWallLeft, _isWallRunning;
 
@@ -19,6 +19,12 @@ public class WallRun : MonoBehaviour
     {
         _movement = GetComponent<PlayerMovement>();
         _rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        WallCheck();
+        WallRunInput();
     }
 
     private void WallCheck()

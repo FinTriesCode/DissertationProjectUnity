@@ -188,7 +188,25 @@ public class PlayerMovement : MonoBehaviour
 
         if(_wallRun._isWallRunning)
         {
-            //jump from wall
+            //normal jump
+            if(_wallRun._isWallLeft && Input.GetKey(KeyCode.D) || _wallRun._isWallRight && Input.GetKey(KeyCode.A))
+            {
+                _rb.AddForce(Vector2.up * _jumpForce * 1.5f);
+                _rb.AddForce(_normalVector * _jumpForce * 0.5f);
+            }
+
+            //side wallhop
+            if (_wallRun._isWallRight || _wallRun._isWallLeft && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) _rb.AddForce(-orientation.up * _jumpForce * 1f);
+            if (_wallRun._isWallRight && Input.GetKey(KeyCode.A)) _rb.AddForce(-orientation.right * _jumpForce * 3.2f);
+            if (_wallRun._isWallLeft && Input.GetKey(KeyCode.D)) _rb.AddForce(orientation.right * _jumpForce * 3.2f);
+
+            //add forward force
+            _rb.AddForce(orientation.forward * _jumpForce * 1f);
+
+            //reset vel
+            _rb.velocity = Vector3.zero;
+
+            Invoke(nameof(ResetJump), _jumpCooldown);
         }
 
 
@@ -216,8 +234,15 @@ public class PlayerMovement : MonoBehaviour
         _xRot = Mathf.Clamp(_xRot, -90f, 90f);
 
         //preform the rots
-        playerCam.transform.localRotation = Quaternion.Euler(_xRot, _desX, 0);
+        playerCam.transform.localRotation = Quaternion.Euler(_xRot, _desX, _wallRun._camTilt);
         orientation.transform.localRotation = Quaternion.Euler(0, _desX, 0);
+
+        //cam tilt
+        if (Math.Abs(_wallRun._camTilt) < _wallRun._maxCamTilt && _wallRun._isWallRunning && _wallRun._isWallRight) _wallRun._camTilt += Time.deltaTime * _wallRun._maxCamTilt * 2;
+        if (Math.Abs(_wallRun._camTilt) < _wallRun._maxCamTilt && _wallRun._isWallRunning && _wallRun._isWallLeft) _wallRun._camTilt -= Time.deltaTime * _wallRun._maxCamTilt * 2;
+
+        if (_wallRun._camTilt > 0 && !_wallRun._isWallRight && !_wallRun._isWallLeft) _wallRun._camTilt -= Time.deltaTime * _wallRun._maxCamTilt * 2;
+        if (_wallRun._camTilt < 0 && !_wallRun._isWallRight && !_wallRun._isWallLeft) _wallRun._camTilt += Time.deltaTime * _wallRun._maxCamTilt * 2;
     }
 
     private void MovementFriction(float x, float y, Vector2 mag)

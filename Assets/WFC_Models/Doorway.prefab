@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 239574726791411779}
   - component: {fileID: 2990724159635533477}
   - component: {fileID: 1051532753609402566}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Doorway (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952165839815158996}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 8505881863539116742}
   - component: {fileID: 4772464880630441626}
   - component: {fileID: 6384308603888568054}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Doorway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8900651642814664890}
-  m_Material: {fileID: 13400000, guid: 250cd95256c4c2b4e9eba6ead9176431, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
