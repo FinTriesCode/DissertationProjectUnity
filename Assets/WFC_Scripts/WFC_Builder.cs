@@ -5,7 +5,7 @@ using UnityEngine;
 public class WFC_Builder : MonoBehaviour
 {
     [SerializeField]
-    private int _width, _height;
+    public int _width, _height;
 
     private WFC_Node[,] _grid;
 
