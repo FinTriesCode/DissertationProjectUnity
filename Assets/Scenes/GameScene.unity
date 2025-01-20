@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5614e465081fa77428a45017c60f9a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 20
-  _height: 20
+  _width: 50
+  _height: 50
   _nodes:
   - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
   - {fileID: 11400000, guid: 0f72b76bc3a242b44a44fa34d0ba2639, type: 2}
@@ -212,7 +212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1967496423}
   _builder: {fileID: 106746286}
-  _sceneLoader: {fileID: 731386695}
 --- !u!135 &577586168
 SphereCollider:
   m_ObjectHideFlags: 0
