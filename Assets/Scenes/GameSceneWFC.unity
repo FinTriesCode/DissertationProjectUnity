@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _width: 25
-  _height: 4
+  _height: 25
   _nodes:
   - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
   - {fileID: 11400000, guid: 0f72b76bc3a242b44a44fa34d0ba2639, type: 2}

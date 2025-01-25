@@ -21,5 +21,7 @@ public class OutOfBounds : MonoBehaviour
     public void ResetSpawn()
     {
         _player.transform.position = _playerSpawn;
+        //_player.transform.position = Vector3.Lerp(_collisionPosition, _playerSpawn, .5f * Time.deltaTime);
+        //_player.transform.position = Vector3.MoveTowards(_player.transform.position, _playerSpawn, 2f * Time.deltaTime);
     }
 }

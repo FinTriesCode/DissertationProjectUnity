@@ -286,7 +286,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1359695661}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadGameScene
+        m_MethodName: LoadGameSceneWFC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
