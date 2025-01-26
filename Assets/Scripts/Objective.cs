@@ -8,10 +8,12 @@ public class Objective : MonoBehaviour
     public WFC_Builder _builder;
     private SceneLoader _sceneLoader;
 
+    public bool _isRandomlyPositioned = false;
+
     private void Start()
     {
-        this.transform.position = new Vector3(Random.Range((_builder._width / 2) * 4, (_builder._width * 4) - 4), 1, Random.Range((_builder._height / 2) * 4, (_builder._height * 4) - 4));
         //this.transform.position = new Vector3(_builder._width, 1, _builder._height);
+        RandomSpawn(_isRandomlyPositioned);
 
         _sceneLoader = FindAnyObjectByType<SceneLoader>();
         _builder = FindObjectOfType<WFC_Builder>();
@@ -26,5 +28,10 @@ public class Objective : MonoBehaviour
 
             Debug.Log("Obj-Player collision");
         }
+    }
+
+    public void RandomSpawn(bool _pIsRandomlyPositioned)
+    {
+        if(_pIsRandomlyPositioned) this.transform.position = new Vector3(Random.Range((_builder._width / 2) * 4, (_builder._width * 4) - 4), 1, Random.Range((_builder._height / 2) * 4, (_builder._height * 4) - 4));
     }
 }

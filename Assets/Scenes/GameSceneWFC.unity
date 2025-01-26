@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1967496423}
   _builder: {fileID: 106746286}
+  _isRandomlyPositioned: 1
 --- !u!135 &577586168
 SphereCollider:
   m_ObjectHideFlags: 0
