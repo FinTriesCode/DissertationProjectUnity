@@ -15,6 +15,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("GameSceneStatic");
     }
 
+    public void LoadObjectiveScene()
+    {
+        SceneManager.LoadScene("ObjectiveScene");
+    }
+
     public void LoadInstructionsScene()
     {
         SceneManager.LoadScene("InstructionsScene");

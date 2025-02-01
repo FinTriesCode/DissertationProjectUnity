@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: -227}
+  m_AnchoredPosition: {x: -13, y: -244}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715458992
@@ -780,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -53}
+  m_AnchoredPosition: {x: -20, y: 15}
   m_SizeDelta: {x: 976.89, y: 559.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644335709
@@ -816,22 +816,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player Controls:
+  m_Text: 'Game Modes:
 
-    Basic Movement: W A S D
+    Generated Level: The play space is procedurally generated
+    via wave funciton colapse.
 
-    Jump: Space Bar
+
+    Static Level: A man-made level, sculped by me
+    (Harry).
 
 
-    Slide:
-    Hold Left Control
+    Objective:
 
-    Wallrun: Hold A or D (towards wall) and hold W
+    Test both worlds and build up an opinion on preferences
+    between the worlds. (Manditory)
 
-    Wall
-    Jump: Hold A or D (away from wall) and press space
 
-'
+    Find and walk into the glowing yellow ball
+    to end the level. (Optional)'
 --- !u!222 &1644335710
 CanvasRenderer:
   m_ObjectHideFlags: 0
