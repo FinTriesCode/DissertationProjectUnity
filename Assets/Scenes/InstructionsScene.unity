@@ -831,6 +831,10 @@ MonoBehaviour:
     Wall
     Jump: Hold A or D (away from wall) and press space
 
+
+    Press M to return to
+    menu
+
 '
 --- !u!222 &1644335710
 CanvasRenderer:
