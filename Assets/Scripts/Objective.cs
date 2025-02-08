@@ -7,6 +7,7 @@ public class Objective : MonoBehaviour
     public GameObject _player;
     public WFC_Builder _builder;
     private SceneLoader _sceneLoader;
+    public DataManager _dataManager;
 
     public bool _isRandomlyPositioned = false;
 
@@ -17,6 +18,7 @@ public class Objective : MonoBehaviour
 
         _sceneLoader = FindAnyObjectByType<SceneLoader>();
         _builder = FindObjectOfType<WFC_Builder>();
+        _dataManager = FindObjectOfType<DataManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,6 +26,7 @@ public class Objective : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //load win scene
+            _dataManager._wfcScenesCompleted++;
             _sceneLoader.LoadWinScene();
 
             Debug.Log("Obj-Player collision");

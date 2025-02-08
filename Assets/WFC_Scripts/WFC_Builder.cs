@@ -20,12 +20,19 @@ public class WFC_Builder : MonoBehaviour
         new Vector2Int(-1, 0)
     };
 
+    public DataManager _dataManager;
+
+    private void Awake()
+    {
+        _dataManager = FindObjectOfType<DataManager>();
+    }
 
     private void Start()
     {
         _grid = new WFC_Node[_width, _height];
 
         Collapse();
+        _dataManager._wfcScenesLoaded++;
     }
 
     private void Collapse()

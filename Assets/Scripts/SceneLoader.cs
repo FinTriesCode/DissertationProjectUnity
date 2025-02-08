@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    DataManager _dataManager;
+
+    public void Awake()
+    {
+        _dataManager = FindObjectOfType<DataManager>();
+    }
+
     public void Update()
     {
         LoadMenuOnPress();
@@ -13,8 +20,12 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void DebugWinMenu()
-     {
-        if (Input.GetKeyDown(KeyCode.P)) LoadWinScene();
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            _dataManager._wfcScenesLoaded++;
+            LoadWinScene();
+        }
     }
 
     public void LoadMenuOnPress()
@@ -26,6 +37,7 @@ public class SceneLoader : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        _dataManager._wfcScenesLoaded++;
         SceneManager.LoadScene("GameSceneWFC");
     }
 
@@ -54,6 +66,7 @@ public class SceneLoader : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        _dataManager._wfcScenesCompleted++;
         SceneManager.LoadScene("WinScene");
     }
 
