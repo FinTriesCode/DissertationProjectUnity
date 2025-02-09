@@ -164,6 +164,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57708b254a7e27e4da0b0de2fdfbc822, type: 2}
   - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
   - {fileID: 11400000, guid: 83e1bbae8464a214e876512b9a7c4b32, type: 2}
+  _dataManager: {fileID: 0}
 --- !u!4 &106746287
 Transform:
   m_ObjectHideFlags: 0
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1967496423}
   _builder: {fileID: 106746286}
+  _dataManager: {fileID: 0}
   _isRandomlyPositioned: 1
 --- !u!135 &577586168
 SphereCollider:
@@ -875,10 +877,9 @@ MonoBehaviour:
   _wallMask:
     serializedVersion: 2
     m_Bits: 128
-  _wallRunForce: 3000
-  _maxWallRunTime: 2
-  _maxWallRunSpeed: 30
-  _maxCamTilt: 25
+  _wallRunForce: 800
+  _maxWallRunSpeed: 10
+  _maxCamTilt: 12
   _camTilt: 0
   _isWallRight: 0
   _isWallLeft: 0
@@ -929,6 +930,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wfcScenesLoaded: 0
   _wfcScenesCompleted: 0
+  _recievedLoadedLevels: 0
+  _recievedCompletedLevels: 0
+  _wfcScenesLoadedText: {fileID: 0}
+  _wfcScenesCompletedText: {fileID: 0}
+  _wfcScenesLoadedContent: 
+  _wfcScenesCompletedContent: 
 --- !u!1001 &3851735253893826301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -939,7 +946,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: _speed
-      value: 800
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
+      propertyPath: _maxSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: playerCam
@@ -952,6 +963,10 @@ PrefabInstance:
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: _speedpeed
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
+      propertyPath: _slideForce
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 2305531126944816756, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,6 +10,8 @@ public class DataManager : MonoBehaviour
 
     public int _wfcScenesLoaded, _wfcScenesCompleted;
 
+    public int _recievedLoadedLevels, _recievedCompletedLevels;
+
     public Text _wfcScenesLoadedText, _wfcScenesCompletedText;
     public string _wfcScenesLoadedContent, _wfcScenesCompletedContent;
 
@@ -28,19 +30,30 @@ public class DataManager : MonoBehaviour
 
     public void ShowInfo()
     {
-        _wfcScenesLoadedContent = _wfcScenesLoaded.ToString();
-        _wfcScenesCompletedContent = _wfcScenesCompleted.ToString();
+        _wfcScenesLoadedContent = GetLoadedLevels().ToString();
+        _wfcScenesCompletedContent = GetCompletedLevels().ToString();
 
         _wfcScenesLoadedText.text = "Generated Scenes Loaded: " + _wfcScenesLoadedContent;
         _wfcScenesCompletedText.text = "Generated Scenes Completed: " + _wfcScenesCompletedContent;
-
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Console.WriteLine("---------------------");
-            Console.WriteLine(_wfcScenesLoaded);
-            Console.WriteLine(_wfcScenesCompleted);
-            Console.WriteLine("---------------------");
-        }
     }
+
+    public int GetCompletedLevels()
+    {
+        _recievedCompletedLevels = WfcLoadedScenesInformaiton._completedLevels;
+
+        return _recievedCompletedLevels;
+    }
+
+    public int GetLoadedLevels()
+    {
+        _recievedLoadedLevels = WfcLoadedScenesInformaiton._LoadedLevels;
+
+        return _recievedLoadedLevels;
+    }
+}
+
+public class WfcLoadedScenesInformaiton : MonoBehaviour
+{
+    public static int _completedLevels, _LoadedLevels;
+
 }

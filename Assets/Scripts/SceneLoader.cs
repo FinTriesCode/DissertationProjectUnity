@@ -22,8 +22,7 @@ public class SceneLoader : MonoBehaviour
     public void DebugWinMenu()
     {
         if (Input.GetKeyDown(KeyCode.P))
-        {
-            _dataManager._wfcScenesLoaded++;
+        { 
             LoadWinScene();
         }
     }
@@ -37,7 +36,7 @@ public class SceneLoader : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        _dataManager._wfcScenesLoaded++;
+        WfcLoadedScenesInformaiton._LoadedLevels++;
         SceneManager.LoadScene("GameSceneWFC");
     }
 
@@ -66,7 +65,7 @@ public class SceneLoader : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        _dataManager._wfcScenesCompleted++;
+        WfcLoadedScenesInformaiton._completedLevels++;
         SceneManager.LoadScene("WinScene");
     }
 

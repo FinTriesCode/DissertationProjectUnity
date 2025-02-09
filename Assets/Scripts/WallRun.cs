@@ -10,7 +10,7 @@ public class WallRun : MonoBehaviour
 
     public LayerMask _wallMask;
 
-    public float _wallRunForce, _maxWallRunTime, _maxWallRunSpeed;
+    public float _wallRunForce, _maxWallRunSpeed;
     public float _maxCamTilt, _camTilt;
 
     public bool _isWallRight, _isWallLeft, _isWallRunning;
