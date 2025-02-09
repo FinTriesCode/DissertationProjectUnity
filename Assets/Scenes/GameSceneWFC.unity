@@ -946,11 +946,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: _speed
-      value: 400
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: _maxSpeed
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1508643882948384535, guid: 30062cfc53d0707459d98d3ef70b3a35, type: 3}
       propertyPath: playerCam
