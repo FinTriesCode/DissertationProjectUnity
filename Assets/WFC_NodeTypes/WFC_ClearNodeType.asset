@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WFC_ClearNodeType
   m_EditorClassIdentifier: 
   _name: ClearNodeType
-  _prefab: {fileID: 3381131667384680767, guid: 4628283703810ff448dce5de2cc3b055, type: 3}
+  _prefab: {fileID: 7400580343911034934, guid: 6813b470ebfda4a45b35ce1eb78065cd, type: 3}
   _topConnection:
     _compatibleNodes:
     - {fileID: 11400000}

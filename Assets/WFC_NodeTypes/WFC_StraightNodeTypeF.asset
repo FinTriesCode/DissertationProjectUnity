@@ -34,6 +34,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0f72b76bc3a242b44a44fa34d0ba2639, type: 2}
     - {fileID: 11400000, guid: 2d82a98d5b4951948af160dbeb0bb1a9, type: 2}
     - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
+    - {fileID: 11400000, guid: f4bda7b63fc66d64682604d514dad208, type: 2}
   _rightConnection:
     _compatibleNodes:
     - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
@@ -41,3 +42,4 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0f72b76bc3a242b44a44fa34d0ba2639, type: 2}
     - {fileID: 11400000, guid: 2d82a98d5b4951948af160dbeb0bb1a9, type: 2}
     - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
+    - {fileID: 11400000, guid: f4bda7b63fc66d64682604d514dad208, type: 2}

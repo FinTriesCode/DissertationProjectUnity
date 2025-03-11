@@ -12,25 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c424a130b66f26f4bad2e55fc17ee6c1, type: 3}
   m_Name: WFC_Empty Node
   m_EditorClassIdentifier: 
-  _name: ParallelNodeType
-  _prefab: {fileID: 7124956365814833945, guid: 4822deef496aa1f449c462ba3d3e520c, type: 3}
+  _name: Empty
+  _prefab: {fileID: 3381131667384680767, guid: 4628283703810ff448dce5de2cc3b055, type: 3}
   _topConnection:
     _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
+    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
     - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
-    - {fileID: 11400000, guid: 2d82a98d5b4951948af160dbeb0bb1a9, type: 2}
   _bottomConnection:
     _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
+    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
     - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
-    - {fileID: 11400000, guid: 2d82a98d5b4951948af160dbeb0bb1a9, type: 2}
   _leftConnection:
     _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
     - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
-    - {fileID: 11400000, guid: d8220850ba3ba7a4eb7519cfa96bfb17, type: 2}
   _rightConnection:
     _compatibleNodes:
-    - {fileID: 11400000, guid: e6152efe96787e749a56fc96ffa85aea, type: 2}
     - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
-    - {fileID: 11400000, guid: d8220850ba3ba7a4eb7519cfa96bfb17, type: 2}
