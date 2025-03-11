@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+//an altered version of Dani's movement script
+//Original Github Repo can be found here:
+//https://github.com/DaniDevy/FPS_Movement_Rigidbody
+
 public class PlayerMovement : MonoBehaviour
 {
     WallRun _wallRun;
