@@ -26,9 +26,22 @@ public class Objective : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //load win scene
-            _dataManager._wfcScenesCompleted++;
-            _sceneLoader.LoadWinScene();
 
+            try 
+            {
+                _dataManager._wfcScenesCompleted++;
+                _sceneLoader.LoadWinScene();
+
+                Debug.Log("try accessed");
+            }
+            catch
+            {
+                _sceneLoader.LoadWinScene();
+
+                Debug.Log("catch accessed");
+            }
+
+            
             Debug.Log("Obj-Player collision");
         }
     }
