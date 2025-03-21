@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         { 
-            LoadWinScene();
+            LoadWinSceneOnPrompt();
         }
     }
 
@@ -55,6 +55,14 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadWinScene()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        WfcLoadedScenesInformaiton._completedLevels++;
+        SceneManager.LoadScene("WinScene");
+    }
+
+    public void LoadWinSceneOnPrompt()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
