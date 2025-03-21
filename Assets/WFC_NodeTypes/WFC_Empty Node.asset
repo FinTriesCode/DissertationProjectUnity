@@ -15,16 +15,11 @@ MonoBehaviour:
   _name: Empty
   _prefab: {fileID: 3381131667384680767, guid: 4628283703810ff448dce5de2cc3b055, type: 3}
   _topConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
-    - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
+    _compatibleNodes: []
   _bottomConnection:
     _compatibleNodes:
-    - {fileID: 11400000, guid: 45f0a4feb211b38419e83f46bd6c0461, type: 2}
-    - {fileID: 11400000, guid: 3bb7092aa72121f45a7dff0aa8605a85, type: 2}
+    - {fileID: 11400000, guid: 2d82a98d5b4951948af160dbeb0bb1a9, type: 2}
   _leftConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
+    _compatibleNodes: []
   _rightConnection:
-    _compatibleNodes:
-    - {fileID: 11400000, guid: 7ef35fd3a824f3e458005f44f8e14db5, type: 2}
+    _compatibleNodes: []

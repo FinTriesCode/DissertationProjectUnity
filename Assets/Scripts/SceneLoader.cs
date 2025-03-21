@@ -6,13 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    DataManager _dataManager;
-
-    public void Awake()
-    {
-        _dataManager = FindObjectOfType<DataManager>();
-    }
-
     public void Update()
     {
         LoadMenuOnPress();
@@ -65,7 +58,7 @@ public class SceneLoader : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        WfcLoadedScenesInformaiton._completedLevels++;
+        //WfcLoadedScenesInformaiton._completedLevels++;
         SceneManager.LoadScene("WinScene");
     }
 

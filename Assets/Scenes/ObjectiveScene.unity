@@ -562,14 +562,14 @@ RectTransform:
   m_GameObject: {fileID: 1307672101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4994, y: 0.85, z: 1}
+  m_LocalScale: {x: 1.4994, y: 0.988125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 978968236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: 58}
+  m_AnchoredPosition: {x: -26, y: 95}
   m_SizeDelta: {x: 689, y: 601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307672103
@@ -780,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 29}
+  m_AnchoredPosition: {x: -20, y: 80}
   m_SizeDelta: {x: 976.89, y: 559.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644335709
@@ -805,7 +805,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -833,7 +833,11 @@ MonoBehaviour:
 
 
     Find and walk into the glowing yellow ball
-    to end the level. (Optional)'
+    to end the level. (Optional - Easy)
+
+
+    Use movement mechanics to reach platform
+    objective. (Optional - Hard)'
 --- !u!222 &1644335710
 CanvasRenderer:
   m_ObjectHideFlags: 0

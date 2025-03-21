@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Objective : MonoBehaviour
+public class ObjectiveWithPlatform : MonoBehaviour
 {
     public GameObject _player;
     public WFC_Builder _builder;
@@ -63,6 +63,6 @@ public class Objective : MonoBehaviour
 
     public void RandomSpawn(bool _isRandomlyPositioned)
     {
-        if(_isRandomlyPositioned) this.transform.position = new Vector3(Random.Range((_builder._width / 2) * 4, (_builder._width * 4) - 4), 1f, Random.Range((_builder._height / 2) * 4, (_builder._height * 4) - 4));
+        if(_isRandomlyPositioned) this.transform.position = new Vector3(Random.Range((_builder._width / 2) * 4, (_builder._width * 4) - 4), 2.5f, Random.Range((_builder._height / 2) * 4, (_builder._height * 4) - 4));
     }
 }

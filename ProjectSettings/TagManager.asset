@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Objective
+  - PlayerOnStaticWorld
   layers:
   - Default
   - TransparentFX

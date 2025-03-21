@@ -37,14 +37,14 @@ public class DataManager : MonoBehaviour
         _wfcScenesCompletedText.text = "Generated Scenes Completed: " + _wfcScenesCompletedContent;
     }
 
-    public int GetCompletedLevels()
+    private int GetCompletedLevels()
     {
         _recievedCompletedLevels = WfcLoadedScenesInformaiton._completedLevels;
 
         return _recievedCompletedLevels;
     }
 
-    public int GetLoadedLevels()
+    private int GetLoadedLevels()
     {
         _recievedLoadedLevels = WfcLoadedScenesInformaiton._LoadedLevels;
 
