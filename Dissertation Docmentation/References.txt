@@ -1,0 +1,12 @@
+References:
+
+F. Kenton Musgrave, Craig E. Kolb and
+Robert S. Mace: The Synthesis and Rendering of Eroded Fractal Terrains. Computer
+Graphics, Volume 23, Number 3, July 1989,
+pages 41-50.
+
+David S. Ebert, F. Kenton Musgrave, Darwyn Peachey, Ken Perlin and Steven Worley:
+Texturing and Modeling: A Procedural Approach (Third Edition). Morgan Kaufmann
+Publishers, 2003.
+
+
