@@ -55,6 +55,7 @@ public class ObjectiveWithPlatform : MonoBehaviour
             }
             catch
             {
+                _dataManager._wfcScenesCompleted--;
                 _sceneLoader.LoadWinScene();
             }
             

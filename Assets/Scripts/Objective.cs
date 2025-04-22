@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
     public GameObject _player;
     public WFC_Builder _builder;
-    private SceneLoader _sceneLoader;
+    public SceneLoader _sceneLoader;
     private DataManager _dataManager;
 
     public bool _isRandomlyPositioned = false;
@@ -16,9 +17,16 @@ public class Objective : MonoBehaviour
         //this.transform.position = new Vector3(_builder._width, 1, _builder._height);
         RandomSpawn(_isRandomlyPositioned);
 
-        _sceneLoader = FindAnyObjectByType<SceneLoader>();
+        //_sceneLoader = FindAnyObjectByType<SceneLoader>();
         _builder = FindObjectOfType<WFC_Builder>();
         _dataManager = FindObjectOfType<DataManager>();
+
+
+        if (_sceneLoader == null) _sceneLoader.AddComponent<SceneLoader>();
+        else _sceneLoader.GetComponent<SceneLoader>();
+
+        if (_dataManager == null) _dataManager.AddComponent<DataManager>();
+        else _dataManager.GetComponent<SceneLoader>();
     }
 
     private void OnTriggerEnter(Collider other)
